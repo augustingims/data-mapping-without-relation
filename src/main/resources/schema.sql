@@ -1,0 +1,24 @@
+DROP DATABASE IF EXISTS `data-mapping`;
+CREATE DATABASE `data-mapping`;
+USE `data-mapping`;
+
+CREATE TABLE IF NOT EXISTS `authors` (
+  `id`         INT(11) NOT NULL AUTO_INCREMENT,
+  `birth_date` DATETIME         DEFAULT NULL,
+  `first_name` VARCHAR(255)     DEFAULT NULL,
+  `last_name`  VARCHAR(255)     DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+  ENGINE = InnoDB
+  AUTO_INCREMENT = 1
+  DEFAULT CHARSET = utf8;
+
+CREATE TABLE IF NOT EXISTS `books` (
+  `id`    INT(11) NOT NULL AUTO_INCREMENT,
+  `isbn`  VARCHAR(255)     DEFAULT NULL,
+  `title` VARCHAR(30)      DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+  ENGINE = InnoDB
+  AUTO_INCREMENT = 1
+  DEFAULT CHARSET = utf8;
